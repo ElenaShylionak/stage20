@@ -1,24 +1,24 @@
 package by.itstep.elena.java.stages.stage20.photCenter.model.entity;
 
+import by.itstep.elena.java.stages.stage20.photCenter.model.entity.abstracts.ServiceOrder;
+
 import java.util.Objects;
 
-public class PhotoOfDocument {
+public class PhotoOfDocument extends ServiceOrder {
 
     private int quantity;
     private String kind;
 
     enum kind{ PASSPORT, CERTIFICATE, MEDICALBOOK
-   }
-
+  }
 
     public PhotoOfDocument() { //дефолтный конструктор
     }
 
-    public PhotoOfDocument(int quantity) {
-        this.quantity = quantity;
-    }
-        public PhotoOfDocument(int quantity, String kind) { //с параметрами конструктор
+        public PhotoOfDocument(double price, int quantity, String kind) { //с параметрами конструктор
+        super();
         this.kind = kind;
+        this.quantity =quantity;
    }
     public String getKind() {
        return kind;
@@ -51,10 +51,10 @@ public class PhotoOfDocument {
 
     @Override
     public String toString() {
-        return "PhotoOfDocument{" +
-                "quantity=" + quantity +
-                ", kind='" + kind + '\'' +
-                '}';
+        return "PhotoOfDocument { " +
+                "quantity: " + quantity +
+                ", kind: " + kind + "\'" +
+                "}";
     }
     //добавить компаратор сбда потом
 }
