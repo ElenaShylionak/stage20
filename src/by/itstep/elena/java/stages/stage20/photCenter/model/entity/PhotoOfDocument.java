@@ -53,7 +53,7 @@ public class PhotoOfDocument extends ServiceOrder {
     public String toString() {
         return "PhotoOfDocument { " +
                 "quantity: " + quantity +
-                ", kind: " + kind + "\'" +
+                ", kind: " + kind + "\'" + super.toString()+
                 "}";
     }
     //добавить компаратор сюда потом

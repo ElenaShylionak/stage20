@@ -4,7 +4,7 @@ package by.itstep.elena.java.stages.stage20.photCenter.model.entity.abstracts;
 
 import by.itstep.elena.java.stages.stage20.photCenter.model.entity.exceptions.ServiceOrderWrongPriceException;
 
-import java.util.Objects;
+import java.util.Objects; //аналог продуктов
 
 
 public class ServiceOrder {
@@ -21,7 +21,7 @@ public class ServiceOrder {
         return price;
     }
 
-      public void setPrice(double price) throws  ServiceOrderWrongPriceException{ //будем генерировать логический Exception
+      public void setPrice(double price) throws ServiceOrderWrongPriceException{ //будем генерировать логический Exception
         //Если цена нормальная, то мы изменяем состояние, а если нет, то в нашем случае ничего не происходит - void
         //А это значит если клиент вводит значение неправильное, программа ничего не возвращает
         //Единственный способ что-то возвратить – это генерировать Ошибку. В нашем случае, логический Exception

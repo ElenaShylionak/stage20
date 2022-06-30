@@ -55,7 +55,7 @@ public class PhotoPrinting extends ServiceOrder {
     public String toString() {
         return "PhotoPrinting { " +
                 "photoPaper = " + photoPaper + '\'' +
-                ", photoSize = " + photoSize +
+                ", photoSize = " + photoSize + super.toString()+
                 '}';
     }
 }

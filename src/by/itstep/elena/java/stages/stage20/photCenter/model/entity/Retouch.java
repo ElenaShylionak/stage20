@@ -43,7 +43,7 @@ public class Retouch extends ServiceOrder {
     @Override
     public String toString() {
         return "Retouch{" +
-                "typeRetouch='" + typeRetouch + '\'' +
+                "typeRetouch='" + typeRetouch + '\'' + super.toString()+
                 '}';
     }
     //РЕАЛИЗОВАТЬ КОМПОРАТОР
