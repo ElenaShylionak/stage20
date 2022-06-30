@@ -41,7 +41,7 @@ public class PhotoPrinting {
         if (!(o instanceof PhotoPrinting)) return false;
         PhotoPrinting photoPrinting = (PhotoPrinting) o;
         return Objects.equals(photoPaper, photoPrinting.photoPaper) && Objects.equals (photoSize, photoPrinting.photoSize );
-        
+
     }
 
     @Override
