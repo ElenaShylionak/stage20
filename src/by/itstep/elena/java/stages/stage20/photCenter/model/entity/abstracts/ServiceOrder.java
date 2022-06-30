@@ -4,40 +4,53 @@ package by.itstep.elena.java.stages.stage20.photCenter.model.entity.abstracts;
 
 import by.itstep.elena.java.stages.stage20.photCenter.model.entity.exceptions.ServiceOrderWrongPriceException;
 
+import java.util.Objects;
+
+
 public class ServiceOrder {
     private double price; //цена услуги
 
-    private double productionTime; //время иготовления
-     enum productionTime { URGENTLY, FORTOMORROW;
-         }
-
-    public ServiceOrder() { //дефольный конмструктор
+    public ServiceOrder() {
     }
 
-    public ServiceOrder(double price, double productionTime) { //конструктор с параметрами
+    public ServiceOrder(double price) {
         this.price = price;
-        this.productionTime = productionTime;
     }
-    // Методы суперкласса
 
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price)  throws ServiceOrderWrongPriceException {
-        this.price = price;
-        if (price > 0) {//защита от дурака, цена не может быть мельше нуля
+      public void setPrice(double price) throws  ServiceOrderWrongPriceException{ //будем генерировать логический Exception
+        //Если цена нормальная, то мы изменяем состояние, а если нет, то в нашем случае ничего не происходит - void
+        //А это значит если клиент вводит значение неправильное, программа ничего не возвращает
+        //Единственный способ что-то возвратить – это генерировать Ошибку. В нашем случае, логический Exception
+
+        if (price > 0) {//защита от дурака, цена не может быть меньше нуля
             this.price = price;
         }else {
-            throw new ServiceOrderWrongPriceException("Incorrect price data entered"); 
+            throw new ServiceOrderWrongPriceException("Incorrect price data entered");
         }
+
     }
 
-    public double getProductionTime() {
-        return productionTime;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ServiceOrder)) return false;
+        ServiceOrder serviceOrder = (ServiceOrder) o;
+        return Double.compare(serviceOrder.price , price) == 0;
     }
 
-    public void setProductionTime(double productionTime) {
-        this.productionTime = productionTime;
+    @Override
+    public int hashCode() {
+        return Objects.hash(price);
+    }
+
+    @Override
+    public String toString() {
+        return "ServiceOrder{" +
+                "price=" + price +
+                '}';
     }
 }

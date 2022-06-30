@@ -1,6 +1,6 @@
 package by.itstep.elena.java.stages.stage20.photCenter.model.entity.exceptions;
 
-//Технические Exception
+//Технические Exception, в программе пока нет технических Exception. Это заготовка на бущущее
 
 public class TechnicalServiceOrderProjectException extends ServiceOrderProjectException{
     //делегируем 4 конструктора

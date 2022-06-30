@@ -9,7 +9,7 @@ public class PhotoOfDocument extends ServiceOrder {
     private int quantity;
     private String kind;
 
-    enum kind{ PASSPORT, CERTIFICATE, MEDICALBOOK
+    enum kind{ PASSPORT, CERTIFICATE, MEDICALBOOK, VISA
   }
 
     public PhotoOfDocument() { //дефолтный конструктор
@@ -56,7 +56,7 @@ public class PhotoOfDocument extends ServiceOrder {
                 ", kind: " + kind + "\'" +
                 "}";
     }
-    //добавить компаратор сбда потом
+    //добавить компаратор сюда потом
 }
 
 

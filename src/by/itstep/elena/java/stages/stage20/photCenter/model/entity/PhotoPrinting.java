@@ -2,9 +2,11 @@ package by.itstep.elena.java.stages.stage20.photCenter.model.entity;
 
 //класс сущность
 
+import by.itstep.elena.java.stages.stage20.photCenter.model.entity.abstracts.ServiceOrder;
+
 import java.util.Objects;
 
-public class PhotoPrinting {
+public class PhotoPrinting extends ServiceOrder {
    private String photoPaper; //параметр фотобумага
     enum photoPaper{MATT, GLOSSY
     }
