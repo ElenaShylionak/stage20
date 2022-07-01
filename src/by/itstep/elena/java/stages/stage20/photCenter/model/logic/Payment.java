@@ -3,17 +3,18 @@ import by.itstep.elena.java.stages.stage20.photCenter.model.entity.abstracts.Ser
 
 import by.itstep.elena.java.stages.stage20.photCenter.model.entity.container.PhotoManager;
 
-public class Payment {
-    ///дописать и ИСПРАВИТЬ ОШИБКИ
+public class Payment { //оплата услуги, продавец
+    ///
 
     public Payment() { //дефолтный конструктор
     }
     //главный метод, который считает цену услуги
         public static double calculateTotalPrice(PhotoManager photoManager) {
+
         double total = 0;
 
-            for (int i = 0; i < photoManager.getServiceOrder() ; i++) {
-                total += photoManager.getServiceOrder(i).getPrice();
+            for (int i = 0; i < photoManager.getServiceOrdersCount() ; i++) {
+                total += photoManager.getServiceOrders(i).getPrice();
                 
             }
 
