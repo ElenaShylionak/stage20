@@ -9,7 +9,7 @@ public class Payment { //оплата услуги, продавец
     public Payment() { //дефолтный конструктор
     }
     //главный метод, который считает цену услуги
-        public static double calculateTotalPrice(PhotoManager photoManager) {
+        public static double calculateTotalPrice(PhotoManager photoManager) { //принимает на вход счет photoManager
 
         double total = 0;
 
