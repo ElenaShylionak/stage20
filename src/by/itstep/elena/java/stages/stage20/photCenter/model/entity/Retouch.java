@@ -13,7 +13,7 @@ public class Retouch extends ServiceOrder {
     public Retouch() {
       }
 
-    public Retouch(double price, String typeRetouch) {
+    public Retouch( String typeRetouch, double price) {
         super(price);
         this.typeRetouch = typeRetouch;
     }

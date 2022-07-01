@@ -15,7 +15,7 @@ public class PhotoOfDocument extends ServiceOrder {
     public PhotoOfDocument() { //дефолтный конструктор
     }
 
-        public PhotoOfDocument(double price, int quantity, String kind) { //с параметрами конструктор
+        public PhotoOfDocument(int quantity, String kind,double price) { //с параметрами конструктор
         super();
         this.kind = kind;
         this.quantity =quantity;

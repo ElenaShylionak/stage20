@@ -15,7 +15,7 @@ public class PhotoPrinting extends ServiceOrder {
     public PhotoPrinting() { //дефолтный
     }
 
-    public PhotoPrinting(double price, String photoPaper , double photoSize) { //c параметрами
+    public PhotoPrinting( String photoPaper , double photoSize, double price) { //c параметрами
         super();
         this.photoPaper = photoPaper;
         this.photoSize = photoSize;
