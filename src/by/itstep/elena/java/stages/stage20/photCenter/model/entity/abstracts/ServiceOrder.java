@@ -18,6 +18,7 @@ public class ServiceOrder {
     }
 
     public double getPrice() {
+
         return price;
     }
 

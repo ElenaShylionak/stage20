@@ -14,7 +14,7 @@ public class Payment { //оплата услуги, продавец
         double total = 0;
 
             for (int i = 0; i < photoManager.getServiceOrdersCount() ; i++) {
-                total += photoManager.getServiceOrders(i).getPrice();
+                total += photoManager.getServiceOrder(i).getPrice();
                 
             }
 
