@@ -1,5 +1,5 @@
 package by.itstep.elena.java.stages.stage20.photCenter.model.entity.abstracts;
-//Это базовый класс имеет важную переменную price, productionTime(время иготовления,
+//Это базовый класс имеет важную переменную price
 // 2 конструктора, гетеры и сетеры, так как поля приватные
 
 import by.itstep.elena.java.stages.stage20.photCenter.model.entity.exceptions.ServiceOrderWrongPriceException;
@@ -10,15 +10,14 @@ import java.util.Objects; //аналог продуктов
 public class ServiceOrder {
     private double price; //цена услуги
 
-    public ServiceOrder() {
+    public ServiceOrder() { //дефолтный конструктор
     }
 
-    public ServiceOrder(double price) {
+    public ServiceOrder(double price) { //конструктор с параметрами
         this.price = price;
     }
 
-    public double getPrice() {
-
+    public double getPrice() { //так как поля приватные метод get
         return price;
     }
 

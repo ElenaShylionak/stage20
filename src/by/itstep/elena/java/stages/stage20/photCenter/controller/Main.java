@@ -17,9 +17,10 @@ public class Main {
         PhotoOfDocument photoOfDocument2= new PhotoOfDocument(10 ,   "VISA" , 20);
         PhotoOfDocument photoOfDocument3= new PhotoOfDocument(13 ,   "VISA" , 22);
         PhotoPrinting photoPrinting = new PhotoPrinting("Matt", 9.13, 33);
+        Retouch retouch = new Retouch();
         //
 
-        System.out.println(photoOfDocument);
+       System.out.println(photoOfDocument);
        System.out.println(photoPrinting);
 
 

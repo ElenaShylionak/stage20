@@ -6,7 +6,7 @@ import by.itstep.elena.java.stages.stage20.photCenter.model.entity.abstracts.Ser
 
 public class PhotoManager { //принимает заказ у клиента (так называемая корзина)
 
-    private ServiceOrder[] serviceOrders; //принимаем массив
+    private ServiceOrder[] serviceOrders; //принимает массив
 
 
     public PhotoManager() { // дефолтный конструктор
@@ -20,20 +20,15 @@ public class PhotoManager { //принимает заказ у клиента (�
             this.serviceOrders = serviceOrders;
        }
     }
-
-
-
-      public int getServiceOrdersCount() { //
+   public int getServiceOrdersCount() { //так как поля приватные необходимы методы get и set
       return serviceOrders.length;
     }
    public ServiceOrder getServiceOrder(int index) {
         return serviceOrders[index];
    }
-
     public void setServiceOrders(ServiceOrder[] serviceOrders) {
         this.serviceOrders = serviceOrders;
     }
-
 
 //    // нужно создать метод добавить - add
     public void add(ServiceOrder serviceOrder) {
@@ -43,6 +38,7 @@ public class PhotoManager { //принимает заказ у клиента (�
         ServiceOrder[] temp = new ServiceOrder[serviceOrders.length + 1];
         int i = 0;
         for (; i < serviceOrders.length; i++) {
+            temp[i] = serviceOrders[i];
        }
         temp[i] = serviceOrder;
         serviceOrders = temp;

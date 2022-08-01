@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class PhotoPrinting extends ServiceOrder {
    private String photoPaper; //параметр фотобумага
-    enum photoPaper{MATT, GLOSSY
+    enum photoPaperType{MATT, GLOSSY
     }
     private double photoSize; //параметр формат фото
 
@@ -16,7 +16,7 @@ public class PhotoPrinting extends ServiceOrder {
     }
 
     public PhotoPrinting( String photoPaper , double photoSize, double price) { //c параметрами
-        super();
+        super(price);
         this.photoPaper = photoPaper;
         this.photoSize = photoSize;
     }

@@ -9,14 +9,14 @@ public class PhotoOfDocument extends ServiceOrder {
     private int quantity;
     private String kind;
 
-    enum kind{ PASSPORT, CERTIFICATE, MEDICALBOOK, VISA
+    enum DocumentType{ PASSPORT, CERTIFICATE, MEDICALBOOK, VISA
   }
 
     public PhotoOfDocument() { //дефолтный конструктор
     }
 
         public PhotoOfDocument(int quantity, String kind,double price) { //с параметрами конструктор
-        super();
+        super(price);
         this.kind = kind;
         this.quantity =quantity;
    }
